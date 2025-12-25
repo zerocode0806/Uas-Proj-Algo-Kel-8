@@ -1,0 +1,78 @@
+{
+    "kategori": [
+        "ATK",
+        "Minuman",
+        "Makanan",
+        "Elektronik",
+        "Otomotif",
+        "Komputer"
+    ],
+    "barang": [
+        {
+            "nama": "Buku Tulis",
+            "kategori": "ATK",
+            "stok": 21,
+            "harga": 5000
+        },
+        {
+            "nama": "Pensil",
+            "kategori": "ATK",
+            "stok": 20,
+            "harga": 2000
+        },
+        {
+            "nama": "Air Mineral",
+            "kategori": "Minuman",
+            "stok": 30,
+            "harga": 3000
+        },
+        {
+            "nama": "Mie Ayam",
+            "kategori": "Makanan",
+            "stok": 34,
+            "harga": 7000
+        },
+        {
+            "nama": "Bulpen",
+            "kategori": "ATK",
+            "stok": 23,
+            "harga": 3000
+        },
+        {
+            "nama": "Kalkulator",
+            "kategori": "Elektronik",
+            "stok": 24,
+            "harga": 90000
+        },
+        {
+            "nama": "Mie Ayam",
+            "kategori": "Makanan",
+            "stok": 23,
+            "harga": 8000
+        },
+        {
+            "nama": "Televisi",
+            "kategori": "Elektronik",
+            "stok": 23,
+            "harga": 1000000
+        },
+        {
+            "nama": "Kulkas",
+            "kategori": "Elektronik",
+            "stok": 23,
+            "harga": 3000000
+        },
+        {
+            "nama": "Mobil",
+            "kategori": "Otomotif",
+            "stok": 3,
+            "harga": 100000000
+        },
+        {
+            "nama": "Mouse",
+            "kategori": "Komputer",
+            "stok": 23,
+            "harga": 50000
+        }
+    ]
+}

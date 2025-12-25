@@ -1,0 +1,152 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.6">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="ADVAN"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-12-24 07:52:48 AM"/>
+        <attribute name="created" value="QURWQU47IFRIRTJORDsgMjAyNS0xMi0xOTsgMTA6NDM6NDMgQU07IDIxNDU="/>
+        <attribute name="edited" value="QURWQU47IFRIRTJORDsgMjAyNS0xMi0yNDsgMDc6NTI6NDggQU07IDIxNTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="Mulai, Ditemukan" type="Boolean" array="False" size=""/>
+            <declare name="Keyword, Status" type="String" array="False" size=""/>
+            <declare name="i, j, k, l, m, n, o, p, JumlahBarang, Pilihan, TotalHarga, TotalBarang, JumlahTambah, IndexHapus" type="Integer" array="False" size=""/>
+            <declare name="NamaBarang, Kategori" type="String" array="True" size="100"/>
+            <declare name="Stok, Harga" type="Integer" array="True" size="100"/>
+            <assign variable="Mulai" expression="True"/>
+            <assign variable="TotalBarang" expression="0"/>
+            <assign variable="TotalBarang" expression="0"/>
+            <output expression="&quot;Selamat Datang Di Aplikasi Manajemen Gudang&quot;"/>
+            <while expression="Mulai==True">
+                <output expression="&quot;Silahkan Pilih Opsi Dibawah ini&quot;"/>
+                <output expression="&quot;1. Tambah Data Barang&quot;"/>
+                <output expression="&quot;2. Tampilkan Data Barang&quot;"/>
+                <output expression="&quot;3. Cari Data Barang&quot;"/>
+                <output expression="&quot;4. Lihat Stok Barang&quot;"/>
+                <output expression="&quot;5. Lihat Nilai Barang&quot;"/>
+                <output expression="&quot;6. Hapus Data Barang&quot;"/>
+                <output expression="&quot;7. Keluar&quot;"/>
+                <input variable="Pilihan"/>
+                <if expression="Pilihan==1">
+                    <then>
+                        <output expression="&quot;Maukkan Jumlah Barang Yang di Input&quot;"/>
+                        <input variable="JumlahTambah"/>
+                        <for variable="n" start="TotalBarang" end="TotalBarang + JumlahTambah - 1" direction="inc" step="1">
+                            <output expression="&quot;Masukkan Nama Barang &quot;"/>
+                            <input variable="NamaBarang[n]"/>
+                            <output expression="&quot;Masukkan Kategori Barang &quot;"/>
+                            <input variable="Kategori[n]"/>
+                            <output expression="&quot;Masukkan Stok Barang &quot;"/>
+                            <input variable="Stok[n]"/>
+                            <output expression="&quot;Masukkan Harga Barang &quot;"/>
+                            <input variable="Harga[n]"/>
+                        </for>
+                        <assign variable="TotalBarang" expression="TotalBarang + JumlahTambah"/>
+                    </then>
+                    <else>
+                        <if expression="Pilihan==2">
+                            <then>
+                                <for variable="j" start="0" end="TotalBarang-1" direction="inc" step="1">
+                                    <output expression="&quot;No: &quot;&amp;j&amp;&quot; | Nama Barang: &quot;&amp;NamaBarang[j]&amp;&quot; | Kategori: &quot;&amp;Kategori[j]&amp;&quot; | Stok: &quot;&amp;Stok[j]&amp;&quot; | Harga: &quot;&amp;Harga[j]"/>
+                                </for>
+                            </then>
+                            <else>
+                                <if expression="Pilihan==3">
+                                    <then>
+                                        <assign variable="Ditemukan" expression="False"/>
+                                        <output expression="&quot;Silahkan Masukkan Nama Atau Kategori Barang&quot;"/>
+                                        <input variable="Keyword"/>
+                                        <for variable="k" start="0" end="TotalBarang-1" direction="inc" step="1">
+                                            <if expression="NamaBarang[k]==Keyword OR Kategori[k]==Keyword">
+                                                <then>
+                                                    <assign variable="Ditemukan" expression="True"/>
+                                                    <output expression="&quot;No: &quot;&amp;k&amp;&quot;Nama Barang: &quot;&amp;NamaBarang[k] &amp; &quot; | Kategori: &quot;&amp;Kategori[k] &amp; &quot; | Stok: &quot;&amp;Stok[k] &amp; &quot; | Harga: &quot;&amp;Harga[k]"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </for>
+                                        <if expression="Ditemukan == False">
+                                            <then>
+                                                <output expression="&quot;Barang Tidak Ditemukan&quot;"/>
+                                            </then>
+                                            <else/>
+                                        </if>
+                                    </then>
+                                    <else>
+                                        <if expression="Pilihan==4">
+                                            <then>
+                                                <for variable="l" start="0" end="TotalBarang-1" direction="inc" step="1">
+                                                    <if expression="Stok[l]&lt;5">
+                                                        <then>
+                                                            <assign variable="Status" expression="&quot;Stok Menipis&quot;"/>
+                                                        </then>
+                                                        <else>
+                                                            <assign variable="Status" expression="&quot;Stok Masih Banyak&quot;"/>
+                                                        </else>
+                                                    </if>
+                                                    <output expression="&quot;No: &quot;&amp;l&amp;&quot;Nama Barang: &quot;&amp;NamaBarang[l] &amp; &quot; | Kategori: &quot;&amp;Kategori[l] &amp; &quot; | Stok: &quot;&amp;Stok[l] &amp; &quot; | Status: &quot;&amp;Status"/>
+                                                </for>
+                                            </then>
+                                            <else>
+                                                <if expression="Pilihan==5">
+                                                    <then>
+                                                        <for variable="m" start="0" end="TotalBarang-1" direction="inc" step="1">
+                                                            <assign variable="TotalHarga" expression="Harga[m]*Stok[m]"/>
+                                                            <output expression="&quot;No: &quot;&amp;m&amp;&quot;Nama Barang: &quot;&amp;NamaBarang[m] &amp; &quot; | Kategori: &quot;&amp;Kategori[m] &amp; &quot; | Stok: &quot;&amp;Stok[m] &amp; &quot; | Harga Satuan: &quot;&amp;Harga[m]&amp;&quot; | Nilai Barang: &quot;&amp;TotalHarga"/>
+                                                        </for>
+                                                    </then>
+                                                    <else>
+                                                        <if expression="Pilihan==6">
+                                                            <then>
+                                                                <for variable="j" start="0" end="TotalBarang-1" direction="inc" step="1">
+                                                                    <output expression="&quot;No: &quot;&amp;j&amp;&quot; | Nama Barang: &quot;&amp;NamaBarang[j]&amp;&quot; | Kategori: &quot;&amp;Kategori[j]&amp;&quot; | Stok: &quot;&amp;Stok[j]&amp;&quot; | Harga: &quot;&amp;Harga[j]"/>
+                                                                </for>
+                                                                <output expression="&quot;Masukkan Nomer Data Yang Ingin Di Hapus&quot;"/>
+                                                                <input variable="IndexHapus"/>
+                                                                <if expression="IndexHapus &lt; TotalBarang">
+                                                                    <then>
+                                                                        <for variable="o" start="IndexHapus" end="TotalBarang-2" direction="inc" step="1">
+                                                                            <assign variable="NamaBarang[o]" expression="NamaBarang[o+1]"/>
+                                                                        </for>
+                                                                        <for variable="p" start="IndexHapus" end="TotalBarang-2" direction="inc" step="1">
+                                                                            <assign variable="NamaBarang[p]" expression="NamaBarang[p + 1]"/>
+                                                                            <assign variable="Kategori[p]" expression="Kategori[p + 1]"/>
+                                                                            <assign variable="Stok[p]" expression="Stok[p + 1]"/>
+                                                                            <assign variable="Harga[p]" expression="Harga[p + 1]"/>
+                                                                        </for>
+                                                                        <assign variable="TotalBarang" expression="TotalBarang - 1"/>
+                                                                        <output expression="&quot;Barang Berhasil Dihapus&quot;"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;Indeks tidak valid!&quot;"/>
+                                                                    </else>
+                                                                </if>
+                                                            </then>
+                                                            <else>
+                                                                <if expression="Pilihan==7">
+                                                                    <then>
+                                                                        <assign variable="Mulai" expression="False"/>
+                                                                    </then>
+                                                                    <else>
+                                                                        <output expression="&quot;Input Invalid, Pilih 1-7&quot;"/>
+                                                                    </else>
+                                                                </if>
+                                                            </else>
+                                                        </if>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </else>
+                </if>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
