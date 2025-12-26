@@ -1,3 +1,9 @@
+# 📦 Sistem Manajemen Inventaris & Transaksi
+
+### UAS Proyek Algoritma dan Pemrograman - Kelompok 8
+
+Aplikasi berbasis CLI (Command Line Interface) untuk pengelolaan stok barang dan pencatatan transaksi penjualan menggunakan penyimpanan data JSON.
+
     Program Pengelolaan Data Barang Gudang Requirement:
         o Data barang: nama, kategori, stok, harga.
         o Disimpan dalam list of dictionary.
@@ -14,22 +20,16 @@
         o Tampilkan Data Barang -> tampilkan_data_barang.py
         o Save Data (.json) -> save_load_data_barang.py
 
-# 📦 Sistem Manajemen Inventaris & Transaksi
-
-### UAS Proyek Algoritma dan Pemrograman - Kelompok 8
-
-Aplikasi berbasis CLI (Command Line Interface) untuk pengelolaan stok barang dan pencatatan transaksi penjualan menggunakan penyimpanan data JSON.
-
 ---
 
 ## 👥 Anggota Kelompok 8
 
-| No  | Nama Anggota   |   NIM    |
-| :-: | :------------- | :------: |
-|  1  | Nama Anggota 1 | NIM Anda |
-|  2  | Nama Anggota 2 | NIM Anda |
-|  3  | Nama Anggota 3 | NIM Anda |
-|  4  | Nama Anggota 4 | NIM Anda |
+| No  | Nama Anggota          | NIM |
+| :-: | :-------------------- | :-: |
+|  1  | M Ubaidilla Dahlan    | 146 |
+|  2  | Aira Diandra Z M      | 121 |
+|  3  | Abdul Rozak Choirudin | 122 |
+|  4  | Muhammad Adam H       | 128 |
 
 ---
 
@@ -60,9 +60,5 @@ UAS-PROJ-ALGO-KEL-8/
 ├── flowchart-system.fprg        # Rancangan alur sistem (Flowgorithm)
 └── README.md                    # Dokumentasi proyek
 
-Anggota Kelompok 8:
-o M Ubaidilla Dahlan (146)
-o Aira Diandra Z M (121)
-o Abdul Rozak Choirudin (122)
-o Muhammad Adam H (128)
+
 ```
