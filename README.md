@@ -1,4 +1,4 @@
-# 📦 Sistem Manajemen Inventaris & Transaksi
+# Sistem Manajemen Gudang
 
 ### UAS Proyek Algoritma dan Pemrograman - Kelompok 8
 
@@ -22,7 +22,7 @@ Aplikasi berbasis CLI (Command Line Interface) untuk pengelolaan stok barang dan
 
 ---
 
-## 👥 Anggota Kelompok 8
+## Anggota Kelompok 8
 
 | No  | Nama Anggota          | NIM |
 | :-: | :-------------------- | :-: |
@@ -33,7 +33,7 @@ Aplikasi berbasis CLI (Command Line Interface) untuk pengelolaan stok barang dan
 
 ---
 
-## 📂 Struktur Folder Proyek
+## truktur Folder Proyek
 
 Berikut adalah susunan direktori agar kode tetap modular dan mudah dikelola:
 
