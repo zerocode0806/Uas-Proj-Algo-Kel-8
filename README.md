@@ -1,7 +1,7 @@
 Program Pengelolaan Data Barang Gudang Requirement:
-o Data barang: nama, kategori, stok, harga.
-o Disimpan dalam list of dictionary.
-o Kategori unik dalam set.
+    o Data barang: nama, kategori, stok, harga.
+    o Disimpan dalam list of dictionary.
+    o Kategori unik dalam set.
 
     Fitur utama:
         o Tambah barang -> tambah_data_barang.py
@@ -14,6 +14,7 @@ o Kategori unik dalam set.
         o Tampilkan Data Barang -> tampilkan_data_barang.py
         o Save Data (.json) -> save_load_data_barang.py
 
+'''
 UAS-PROJ-ALGO-KEL-8/
 │
 ├── database/ # Penyimpanan data (Persistence)
@@ -35,6 +36,7 @@ UAS-PROJ-ALGO-KEL-8/
 ├── main.py # Entry point/Menu utama aplikasi
 ├── flowchart-system.fprg # Rancangan alur sistem (Flowgorithm)
 └── README.md # Dokumentasi proyek
+'''
 
 Note Fitur:
 o Untuk Fitur "Save Data (.json) -> save_load_data_barang.py" saya tambahkan agar saat user menjalankan aplikasi lagi, data barang masih tersimpan
