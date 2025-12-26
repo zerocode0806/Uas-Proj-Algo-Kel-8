@@ -4,16 +4,16 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="ADVAN"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-12-24 07:52:48 AM"/>
+        <attribute name="saved" value="2025-12-25 09:22:30 PM"/>
         <attribute name="created" value="QURWQU47IFRIRTJORDsgMjAyNS0xMi0xOTsgMTA6NDM6NDMgQU07IDIxNDU="/>
-        <attribute name="edited" value="QURWQU47IFRIRTJORDsgMjAyNS0xMi0yNDsgMDc6NTI6NDggQU07IDIxNTI="/>
+        <attribute name="edited" value="QURWQU47IFRIRTJORDsgMjAyNS0xMi0yNTsgMDk6MjI6MzAgUE07IDIxNTg="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="Mulai, Ditemukan" type="Boolean" array="False" size=""/>
-            <declare name="Keyword, Status" type="String" array="False" size=""/>
-            <declare name="i, j, k, l, m, n, o, p, JumlahBarang, Pilihan, TotalHarga, TotalBarang, JumlahTambah, IndexHapus" type="Integer" array="False" size=""/>
+            <declare name="Mulai, Ditemukan, SudahAda" type="Boolean" array="False" size=""/>
+            <declare name="Keyword, Status, KategoriBaru" type="String" array="False" size=""/>
+            <declare name="i, j, k, l, m, n, o, p, q, JumlahBarang, Pilihan, TotalHarga, TotalBarang, JumlahTambah, IndexHapus" type="Integer" array="False" size=""/>
             <declare name="NamaBarang, Kategori" type="String" array="True" size="100"/>
             <declare name="Stok, Harga" type="Integer" array="True" size="100"/>
             <assign variable="Mulai" expression="True"/>
@@ -38,7 +38,17 @@
                             <output expression="&quot;Masukkan Nama Barang &quot;"/>
                             <input variable="NamaBarang[n]"/>
                             <output expression="&quot;Masukkan Kategori Barang &quot;"/>
-                            <input variable="Kategori[n]"/>
+                            <assign variable="SudahAda" expression="False"/>
+                            <input variable="KategoriBaru"/>
+                            <for variable="q" start="0" end="TotalBarang - 1" direction="inc" step="1">
+                                <if expression="Kategori[q] == KategoriBaru">
+                                    <then>
+                                        <assign variable="SudahAda" expression="True"/>
+                                    </then>
+                                    <else/>
+                                </if>
+                            </for>
+                            <assign variable="Kategori[n]" expression="KategoriBaru"/>
                             <output expression="&quot;Masukkan Stok Barang &quot;"/>
                             <input variable="Stok[n]"/>
                             <output expression="&quot;Masukkan Harga Barang &quot;"/>
