@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="ADVAN"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-12-25 09:22:30 PM"/>
+        <attribute name="saved" value="2025-12-30 11:30:50 AM"/>
         <attribute name="created" value="QURWQU47IFRIRTJORDsgMjAyNS0xMi0xOTsgMTA6NDM6NDMgQU07IDIxNDU="/>
-        <attribute name="edited" value="QURWQU47IFRIRTJORDsgMjAyNS0xMi0yNTsgMDk6MjI6MzAgUE07IDIxNTg="/>
+        <attribute name="edited" value="QURWQU47IFRIRTJORDsgMjAyNS0xMi0zMDsgMTE6MzA6NTAgQU07IDIxMzM="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -70,12 +70,20 @@
                                         <output expression="&quot;Silahkan Masukkan Nama Atau Kategori Barang&quot;"/>
                                         <input variable="Keyword"/>
                                         <for variable="k" start="0" end="TotalBarang-1" direction="inc" step="1">
-                                            <if expression="NamaBarang[k]==Keyword OR Kategori[k]==Keyword">
+                                            <if expression="NamaBarang[k]==Keyword">
                                                 <then>
                                                     <assign variable="Ditemukan" expression="True"/>
-                                                    <output expression="&quot;No: &quot;&amp;k&amp;&quot;Nama Barang: &quot;&amp;NamaBarang[k] &amp; &quot; | Kategori: &quot;&amp;Kategori[k] &amp; &quot; | Stok: &quot;&amp;Stok[k] &amp; &quot; | Harga: &quot;&amp;Harga[k]"/>
+                                                    <output expression="&quot;No: &quot;&amp;k&amp;&quot; | Nama Barang: &quot;&amp;NamaBarang[k] &amp; &quot; | Kategori: &quot;&amp;Kategori[k] &amp; &quot; | Stok: &quot;&amp;Stok[k] &amp; &quot; | Harga: &quot;&amp;Harga[k]"/>
                                                 </then>
-                                                <else/>
+                                                <else>
+                                                    <if expression="Kategori[k]==Keyword">
+                                                        <then>
+                                                            <assign variable="Ditemukan" expression="True"/>
+                                                            <output expression="&quot;No: &quot;&amp;k&amp;&quot; | Nama Barang: &quot;&amp;NamaBarang[k] &amp; &quot; | Kategori: &quot;&amp;Kategori[k] &amp; &quot; | Stok: &quot;&amp;Stok[k] &amp; &quot; | Harga: &quot;&amp;Harga[k]"/>
+                                                        </then>
+                                                        <else/>
+                                                    </if>
+                                                </else>
                                             </if>
                                         </for>
                                         <if expression="Ditemukan == False">
