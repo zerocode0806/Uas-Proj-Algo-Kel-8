@@ -11,15 +11,19 @@ def cari_data_barang():
     print(garis)
 
     for i, b in enumerate(data.data_barang, start=1):
-        if keyword in b["nama"].lower() or keyword in b["kategori"].lower():
+        if keyword in b["nama"].lower():
             print(
-                f"{i:<4} "
-                f"{b['kategori']:<20} "
-                f"{b['nama']:<25} "
-                f"{b['stok']:<10} "
-                f"{b['harga']:<15}"
+                f"{i:<4} {b['kategori']:<20} {b['nama']:<25} "
+                f"{b['stok']:<10} {b['harga']:<15}"
             )
             ditemukan = True
+        else:
+            if keyword in b["kategori"].lower():
+                print(
+                    f"{i:<4} {b['kategori']:<20} {b['nama']:<25} "
+                    f"{b['stok']:<10} {b['harga']:<15}"
+                )
+                ditemukan = True
 
     if not ditemukan:
         print("Barang tidak ditemukan")
