@@ -42,7 +42,8 @@ UAS-PROJ-ALGO-KEL-8/
 ├── database/                    # Penyimpanan Data (Persistence)
 │   ├── __init__.py              # Inisialisasi package database
 │   ├── data.py                  # Penampung list data di memori (runtime)
-│   └── data_barang.json         # File fisik database barang
+│   ├── data_barang.json         # File fisik database barang
+│   └── data_transaksi.json      # File fisik database transaksi
 │
 ├── function/                    # Modul Logika Fitur Aplikasi
 │   ├── __init__.py              # Inisialisasi package function
